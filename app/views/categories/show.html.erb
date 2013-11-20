@@ -1,20 +1,8 @@
-<h1>Categories#show</h1>
-<p>Find me in app/views/categories/show.html.erb</p>
+<h2>Restaurant Category: <%= @category.category_name  %></h2>
 
+  <% @category.restaurants.each do |x| %>
 
-<%= form_tag(categories_path, method: "get") do %>
- <%= select :id, :category_name, options_from_collection_for_select(Category.all, :id, :category_name) %>
- <%= submit_tag "Go!" %>
- <% end %>
-
-
-<p>Category: <%#= select_tag 'category_id', options_for_select(@categories.each { |c| [c.category_name, c.id]}) %>
-  
-  <%= @category.category_name  %></p>
-
-<% @category.restaurants.each do |x| %>
-
-  <p>Restaurants: <%= x.name %></p>
+  <p>Restaurants: <%= link_to x.name, "/restaurants/#{x[:id]}" %></p>
 
   <% end %> 
 
