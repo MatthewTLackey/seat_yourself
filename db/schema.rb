@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20131119204716) do
   end
 
   create_table "reservations", force: true do |t|
-    t.datetime "meal_time"
+    t.time     "meal_time"
     t.integer  "party_size"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(version: 20131119204716) do
   end
 
   create_table "users", force: true do |t|
-    t.string   "email",            null: false
+    t.string   "email"
     t.string   "crypted_password"
     t.string   "salt"
     t.datetime "created_at"
