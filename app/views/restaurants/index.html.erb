@@ -1,10 +1,12 @@
 <h1>Restaurants</h1>
+<p>Choose a restaurant to make a reservation.</p>
 
-<ul>
-  <% @restaurants.each do |restaurant| %>
-  
-  
-    <li><%= link_to restaurant.name, "/restaurants/#{restaurant[:id]}"%>, <%=restaurant.neighbourhood%></li>
+<% @restaurants.each do |restaurant| %>
 
-    <% end %>
-</ul>
+
+  <div class="restaurant">
+    <p><%= link_to restaurant.name, "/restaurants/#{restaurant[:id]}"%></p>
+   <p><%=restaurant.neighbourhood%></p>
+  </div>
+
+  <% end %>

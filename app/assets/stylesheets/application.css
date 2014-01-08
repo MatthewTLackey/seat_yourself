@@ -11,3 +11,14 @@
  *= require_self
  *= require_tree .
  */
+
+body{
+
+}
+
+#left_side{
+  display: inline-block;
+}
+#right_side{
+  float: right;
+}
