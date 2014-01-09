@@ -48,15 +48,15 @@
 #   :hours_close => 21
 # )
 
-Restaurant.create!(
-  :name => 'Taco Bell',
-  :address  =>'King Street',
-  :neighbourhood => 'Fashion District',
-  :summary => 'Mexican Restaurant',
-  :seats => 100,
-  :hours_open =>11,
-  :hours_close => 20
-)
+# Restaurant.create!(
+#   :name => 'Taco Bell',
+#   :address  =>'King Street',
+#   :neighbourhood => 'Fashion District',
+#   :summary => 'Mexican Restaurant',
+#   :seats => 100,
+#   :hours_open =>11,
+#   :hours_close => 20
+# )
 
 
 # Categories.create!(
@@ -70,6 +70,41 @@ Restaurant.create!(
 #   :restaurant_id => 2,
 #   :category_id => 2
 #   )
+
+
+
+Restaurant.create!(
+  :name => 'Burrito Boyz',
+  :address  =>'Adelaide St.',
+  :neighbourhood => 'Fashion District',
+  :summary => 'Good burritos close by',
+  :seats => 12,
+  :hours_open =>12,
+  :hours_close => 23
+)
+Restaurant.create!(
+  :name => 'Burritos Locos',
+  :address  =>'Peter St.',
+  :neighbourhood => 'Fashion District',
+  :summary => 'So good!',
+  :seats => 5,
+  :hours_open =>11,
+  :hours_close => 23
+)
+Restaurant.create!(
+  :name => 'A Well Dressed Burrito',
+  :address  =>'Dupont Circle',
+  :neighbourhood => 'Dupont Circle',
+  :summary => 'Awesome hole-in-the wall kind of place',
+  :seats => 12,
+  :hours_open =>11,
+  :hours_close => 14
+)
+
+Categories.create!(
+  :category_name => 'Mexican',
+  :restaurant_id => 3
+  )
 
 
 

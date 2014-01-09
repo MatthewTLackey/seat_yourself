@@ -20,11 +20,6 @@ class ReservationsController < ApplicationController
     @reservation = @restaurant.reservations.build(reservation_params)
 
     @reservation.user_id = current_user.id
-    #validates :enough_space? => true
-    # puts " ---------------------------------------------------------------------------------------------------------------------------------"
-    # puts find_seats_available
-    # puts " ---------------------------------------------------------------------------------------------------------------------------------"
-
     if @restaurant.enough_space?(@reservation)
       @reservation.save
       redirect_to current_user ,notice: "Reservation submitted."
